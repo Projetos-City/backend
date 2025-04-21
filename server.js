@@ -13,7 +13,7 @@ app.use(cors());
 app.post('/', async (req, res) => {
     res.send('Backend is alive and esperando por um POST!');
 });
-module.exports = app;
+
 
 //CRIANDO AS CHAVES DE ASSINATURA DO JWT
 const SECRET_KEY ="0123456789";//CHAVE PARA ASSINAR O TOKEN
@@ -658,6 +658,6 @@ app.delete('/editoras/:id',verificaToken, async (req, res) => {
 
 //EXECUTA O SERVIDOR NA PORTA 3000
 const porta =3000;
-app.listen(porta,()=>{
-    console.log(`Servidor Rodando na porta ${porta}`)
-})
+console.log(`Servidor Rodando na porta ${porta}`)
+
+module.exports = app;
