@@ -656,8 +656,5 @@ app.delete('/editoras/:id',verificaToken, async (req, res) => {
 });
 
 
-//EXECUTA O SERVIDOR NA PORTA 3000
-const porta =3000;
-console.log(`Servidor Rodando na porta ${porta}`)
 
 module.exports = app;
