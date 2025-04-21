@@ -4,12 +4,16 @@ const fs= require('fs').promises;
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const path=require('path');
+const port =process.env.PORT ||  3000;
 
 const app =express();//CRIAÇÃO DA APLICAÇÃO
 app.use(express.json());
 app.use(cors());
 
-const port =process.env.PORT ||  3000;
+app.post('/', async (req, res) => {
+    res.send('Backend is alive and esperando por um POST!');
+});
+module.exports = app;
 
 //CRIANDO AS CHAVES DE ASSINATURA DO JWT
 const SECRET_KEY ="0123456789";//CHAVE PARA ASSINAR O TOKEN
